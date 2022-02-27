@@ -5,81 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="myScript.js"></script>
 </head>
 <body>
-    <script>
-        function computerPlay() {
-            const choice = (Math.random() * 3);
-            if ( choice <=1) {
-                return 'rock';
-            } else if (choice >= 2) {
-                return'scissors';
-        
-            }else return 'paper';
-        }
-        let computerScore = 0;
-        let playerScore = 0;
-
-        function playRound(playerSelection, computerSelection) {
-                if (playerSelection == 'rock' && computerSelection == 'scissors') {
-                    playerScore++;
-                    return 'You Win! Rock beats Scissors';
-                    
-                } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-                        computerScore++;
-                            return 'You lose! Paper beats Rock'; 
-                } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-                    playerScore++;
-                    return 'You Win! Rock beats Scissors';
-                } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-                    playerScore++
-                    return 'You Win! Paper beats Rock!';
-                }else if (playerSelection == 'paper' && computerSelection =='scissors') {
-                    return 'You Lose Scissors beats Paper';
-                }else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-                    computerScore++
-                    return 'You Lose! Rock beats Scissors';
-                }else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-                    return 'You Win! Scissors beats Paper!';
-                } else return 'That is a Tie';
-                
-        }
-        
-        
-        function game() {
-            for (let i = 0; i < 5; i++){
-            let playerSelection = prompt('Choose your weapon: Rock, Paper, Scissors')
-            playerSelection = playerSelection.toLowerCase();
-            const computerSelection = computerPlay()
-            console.log(playRound(playerSelection, computerSelection))
-        
-            }
-
-            if (playerScore > computerScore){
-                console.log(`You're the winner! Final Score: ${playerScore} to ${computerScore}`);
-            }else if (computerScore > playerScore){
-                console.log(`You got beaten. Final Score:${playerScore} to ${computerScore}`)
-            }else 
-            console.log(`Its a tie!. Final Score: ${playerScore} to ${computerScore}`);
-        }
-        game();
-         
-     
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </script>
 </body>
 </html>
